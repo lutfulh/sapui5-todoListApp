@@ -2,17 +2,21 @@
 	<Shell id="shell">
 		<App id="app">
 			<pages>
-				<Page id="page" title="{i18n>title}">
+				<Page id="page" title="{i18n>title}" >
 					<content>
+						<Button text="Add task" press="onAdd" />
 						<List items="{todo>/}">
 							<items>
 								<StandardListItem title="{todo>task}"
 									description="{ parts:['i18n>todoDescription', 'todo>description'], formatter: 'jQuery.sap.formatMessage'}"
-									info="{ path: 'todo>status', formatter: '.formatter.fnFormatStatus'}"
-									type="Navigation"
+
+									type="Active"
 									press="onPressItem"/>
+								
 							</items>
+						
 						</List>
+							
 					</content>
 				</Page>
 			</pages>

@@ -11,22 +11,15 @@ sap.ui.define([
 			oModel.setDefaultBindingMode("OneWay");
 			return oModel;
 		},
-						createTodoModel: function() {
+			createTodoModel: function() {
 			var oData = [
 				{
-					"task": "do laundry",
-					"description": "laundry at saturday 10 pm",
-					"status": 1
+					"task": "Do laundry",
+					"description": "Laundry at saturday 10 pm"
 				},
 				{
-					"task": "Pay Bills",
-					"description": "Pay Bills for my home rent",
-					"status": 2
-				},
-				{
-					"task": "Exercise",
-					"description": "Going to gym in the eevening",
-					"status": 3
+					"task": "Pay bills",
+					"description": "Pay Bills for my home rent"
 				}
 			];
 			var oModel = new JSONModel(oData);

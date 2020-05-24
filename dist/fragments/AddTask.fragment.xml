@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Dialog title="Add Task" class="sapUiLargeMargin">
+		<Input id="taskTitle" placeholder="Add title"/>
+		<TextArea id="taskDetail" placeholder="Add details" rows="15" />
+		<beginButton>
+			<Button text="OK" press="onPressAddTask"/>
+		</beginButton>
+	</Dialog>
+</core:FragmentDefinition>

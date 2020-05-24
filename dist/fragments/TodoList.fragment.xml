@@ -1,0 +1,9 @@
+id":2,
+             		"task": "Pay bills",
+             		"description": "Pay Bills for my home rent"<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<List class="sapUiResponsiveMargin" width="auto" items="{todo>/Todos}" id="idList" mode="Delete" delete="handleDelete">
+		<items>
+			<StandardListItem title="{todo>task}" description="{todo>description}"/>
+		</items>
+	</List>
+</core:FragmentDefinition>

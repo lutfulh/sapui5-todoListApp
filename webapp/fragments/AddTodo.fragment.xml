@@ -1,0 +1,9 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+  <Panel>
+      <content>
+      	 <Button text="Add task" class="sapUiResponsive" press="onAdd"/>
+      
+      </content>
+   </Panel>
+ 
+</core:FragmentDefinition>

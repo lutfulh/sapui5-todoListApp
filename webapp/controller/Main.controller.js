@@ -8,16 +8,14 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("Home.todoLIstApp.controller.Main", {
-		
+
 		onInit: function () {
 			// set explored app's demo model on this sample
-		
 
 		},
 		onSearch: function (oEvent) {
 			// add filter for search
 			var aFilters = [];
-
 			var sQuery = oEvent.getSource().getValue();
 			if (sQuery) {
 				var filters = new Filter("task", sap.ui.model.FilterOperator.Contains, sQuery);
@@ -61,16 +59,14 @@ sap.ui.define([
 		onPressOk: function (oEvent) {
 			var oDialog = oEvent.getSource().getParent();
 			oDialog.close();
-			oDialog.destroy();s
+			oDialog.destroy();
 		},
 		handleDelete: function (oEvent) {
-			
-			var oList= oEvent.getSource();
-		    var sBindingPath=oEvent.getParameter("listItem").getBindingContextPath()
-		    var selectedIndex = sBindingPath.split("/")[2];
-		  	var oModel = this.getView().getModel("todo").getData();
-		  	oModel.Todos.splice(selectedIndex,1)
-		    this.getView().getModel("todo").refresh(true);
+			var sBindingPath = oEvent.getParameter("listItem").getBindingContextPath();
+			var selectedIndex = sBindingPath.split("/")[2];
+			var oModel = this.getView().getModel("todo").getData();
+			oModel.Todos.splice(selectedIndex, 1);
+			this.getView().getModel("todo").refresh(true);
 			console.log(oModel);
 		}
 

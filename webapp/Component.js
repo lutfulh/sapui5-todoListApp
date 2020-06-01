@@ -1,11 +1,12 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"Home/todoLIstApp/model/models"
-], function (UIComponent, Device, models) {
+	"sap/employeeList/Employees/model/models",
+	"sap/ui/model/json/JSONModel"
+], function (UIComponent, Device, models, JSONModel) {
 	"use strict";
 
-	return UIComponent.extend("Home.todoLIstApp.Component", {
+	return UIComponent.extend("sap.employeeList.Employees.Component", {
 
 		metadata: {
 			manifest: "json"
@@ -25,7 +26,10 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-
+			
+            //get data from model
+			var model = new JSONModel("model/EmployeeData.json");
+			this.setModel(model, "employee");
 		}
 	});
 });

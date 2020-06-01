@@ -1,0 +1,44 @@
+{
+	"employees":[{
+		"id":"1",
+		"firstName":"Nancy",
+		"lastName":"Davolio",
+		"address":"507 - 20th Ave. E. Apt. 2A",
+		"city":"Seattle, WA",
+		"postalCode":"98122",
+		"phone":"(206) 555-9857",
+		"country":"USA",
+		"info":"Information of",
+		"projects":"Projects of",
+		"hobbies":"Hobbies of",
+		"notes":"Notes of"
+	},
+	{
+		"id":"2",
+		"firstName":"Andrew",
+		"lastName":"Fuller",
+		"address":"908 W. Capital Way",
+		"city":"Tacoma, WA",
+		"postalCode":"98401",
+		"phone":"(206) 555-9482",
+		"country":"USA",
+		"info":"Information of",
+		"projects":"Projects of",
+		"hobbies":"Hobbies of",
+		"notes":"Notes of"
+	},
+	{
+		"id":"3",
+		"firstName":"Janet",
+		"lastName":"Leverling",
+		"address":"722 Moss Bay Blvd.",
+		"city":"Kirkland, WA",
+		"postalCode":"98033",
+		"phone":"(206) 555-3412",
+		"country":"USA",
+		"info":"Information of",
+		"projects":"Projects of",
+		"hobbies":"Hobbies of",
+		"notes":"Notes of"
+	}]
+}

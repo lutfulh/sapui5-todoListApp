@@ -1,5 +1,5 @@
 sap.ui.define([
-	"Home/todoLIstApp/test/unit/controller/Main.controller"
+	"sap/employeeList/Employees/test/unit/controller/App.controller"
 ], function () {
 	"use strict";
 });

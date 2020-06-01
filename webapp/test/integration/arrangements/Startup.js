@@ -3,7 +3,7 @@ sap.ui.define([
 ], function (Opa5) {
 	"use strict";
 
-	return Opa5.extend("Home.todoLIstApp.test.integration.arrangements.Startup", {
+	return Opa5.extend("sap.employeeList.Employees.test.integration.arrangements.Startup", {
 
 		iStartMyApp: function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -14,7 +14,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "Home.todoLIstApp",
+					name: "sap.employeeList.Employees",
 					async: true
 				},
 				hash: oOptions.hash,

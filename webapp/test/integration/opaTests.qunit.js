@@ -5,7 +5,7 @@ sap.ui.getCore().attachInit(function () {
 	"use strict";
 
 	sap.ui.require([
-		"Home/todoLIstApp/test/integration/AllJourneys"
+		"sap/employeeList/Employees/test/integration/AllJourneys"
 	], function () {
 		QUnit.start();
 	});

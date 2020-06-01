@@ -1,7 +1,7 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-		"id": "sap.employeeList.Employees",
+		"id": "Home.todoLIstApp",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -33,10 +33,10 @@
 	"sap.ui5": {
 		"flexEnabled": false,
 		"rootView": {
-			"viewName": "sap.employeeList.Employees.view.Home",
+			"viewName": "Home.todoLIstApp.view.Main",
 			"type": "XML",
 			"async": true,
-			"id": "App"
+			"id": "Main"
 		},
 		"dependencies": {
 			"minUI5Version": "1.65.6",
@@ -54,8 +54,14 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "sap.employeeList.Employees.i18n.i18n"
+					"bundleName": "Home.todoLIstApp.i18n.i18n"
 				}
+			},
+			"todo": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "Todos.json",
+				"preload": true
 			}
 		},
 		"resources": {
@@ -70,38 +76,27 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"async": true,
-				"viewPath": "sap.employeeList.Employees.view",
+				"viewPath": "Home.todoLIstApp.view",
 				"controlAggregation": "pages",
 				"controlId": "app",
-				"clearControlAggregation": false,
-				"bypassed": {
-					"target":"targetInvalid"
-				}
+				"clearControlAggregation": false
 			},
 			"routes": [
 				{
-					"name": "home",
-					"pattern": "",
-					"target": "targetHOME"
-				},
-				{
-					"name": "detail",
-					"pattern": "Detail/{employeePath}",
-					"target": "detail"
+					"name": "RouteMain",
+					"pattern": "RouteMain",
+					"target": [
+						"TargetMain"
+					]
 				}
 			],
 			"targets": {
-				"targetHOME": {
-					"viewName": "Home",
-					"viewLevel": 1
-				},
-				"detail": {
-					"viewID": "detail",
-					"viewName": "Detail"
-				},
-				"targetInvalid": {
-					"viewName": "NotFound",
-					"transition": "show"
+				"TargetMain": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "Main",
+					"viewName": "Main"
 				}
 			}
 		}

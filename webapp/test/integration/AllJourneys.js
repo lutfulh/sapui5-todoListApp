@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "sap.employeeList.Employees.view.",
+		viewNamespace: "Home.todoLIstApp.view.",
 		autoWait: true
 	});
 });

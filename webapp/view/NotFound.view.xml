@@ -1,3 +1,0 @@
-<mvc:View controllerName="sap.employeeList.Employees.controller.NotFound" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
-	<MessagePage title="{i18n>NotFound}" text="{i18n>NotFound.text}" description="{i18n>NotFound.description}"/>
-</mvc:View>

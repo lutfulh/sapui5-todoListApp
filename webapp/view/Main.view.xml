@@ -1,0 +1,32 @@
+<mvc:View controllerName="Home.todoLIstApp.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<subHeader>
+						<OverflowToolbar>
+						
+							<SearchField liveChange="onSearch"  width="50%"/>
+						</OverflowToolbar>
+					</subHeader>
+					<content>
+					 <Panel>
+      <content>
+      	 <Button text="Add task" class="sapUiResponsive" press="onAdd"/>
+      
+      </content>
+   </Panel>
+   <List class="sapUiResponsiveMargin" width="auto" items="{todo>/Todos}" id="idList" mode="Delete" delete="handleDelete">
+		<items>
+			<StandardListItem title="{todo>task}" description="{todo>description}"/>
+		</items>
+	</List>
+						<!---<core:Fragment fragmentName="Home.todoLIstApp.fragments.AddTodo" type="XML" />
+						<core:Fragment fragmentName="Home.todoLIstApp.fragments.TodoList" type="XML" />-->
+						
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
